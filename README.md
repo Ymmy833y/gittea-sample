@@ -8,7 +8,7 @@ Giteaを使って、ローカル環境にリモートリポジトリを構築す
 - Docker Compose
 
 ## 手順
-### 1. コンテナ起動
+### 1. Giteaコンテナ起動
 ```bash
 docker compose up -d
 ```
@@ -102,6 +102,22 @@ docker compose up -d
 git remote add origin <リモートリポジトリのURL>
 ```
 
+---
+
+> [!tip]
+> ここからは、別端末からリモートリポジトリにアクセスする手順。
+
+> [!warning]
+> 同じネットワーク上にいないとアクセスはできない！
+
+> [!note]
+> 事前にサーバーIPアドレスを確認しておく。\
+> 例）Windows PowerShellで以下のコマンドを実行する。
+> ```bash
+> ipconfig
+> ```
+> 「IPv4 アドレス」の値
+
 ### 5. 3000ポートの開放
 別端末からGiteaにアクセスするために、3000ポートを開放する必要がある。
 
@@ -137,22 +153,6 @@ RemoteDynamicKeywordAddresses : {}
 PolicyAppId                   :
 PackageFamilyName             :
 ```
-
----
-
-> [!tip]
-> ここからは、別端末からリモートリポジトリにアクセスする手順。
-
-> [!warning]
-> 同じネットワーク上にいないとアクセスはできない！
-
-> [!note]
-> 事前にサーバーIPアドレスを確認しておく。\
-> 例）Windows PowerShellで以下のコマンドを実行する。
-> ```bash
-> ipconfig
-> ```
-> 「IPv4 アドレス」の値
 
 ### 6. アカウント作成
 
